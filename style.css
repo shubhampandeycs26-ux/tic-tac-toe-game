@@ -1,0 +1,143 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.score-box {
+    flex: 1;
+    padding: 12px 5px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+}
+
+.score-box h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.score-box span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#status {
+    margin-bottom: 20px;
+    color: #facc15;
+    font-size: 21px;
+    min-height: 26px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    height: 105px;
+    border: none;
+    border-radius: 14px;
+    background: #e2e8f0;
+    color: #2563eb;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cell:hover:enabled {
+    background: white;
+    transform: scale(1.04);
+}
+
+.cell.o {
+    color: #e11d48;
+}
+
+.cell.winner {
+    background: #86efac;
+    color: #14532d;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 13px 8px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons button:last-child {
+    background: #475569;
+}
+
+.buttons button:hover {
+    opacity: 0.85;
+}
+
+.footer {
+    margin-top: 22px;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 18px;
+    }
+
+    .cell {
+        height: 85px;
+    }
+}
